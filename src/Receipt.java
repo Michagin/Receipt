@@ -1,50 +1,39 @@
 public class Receipt {
 
-    double total;
-    double subtotal;
-    double tax;
-    double tip = 0;
-    double subtotalWOTax;
-    double momsSats = 0.25;
-    String currency = "DKK";
+    private final double momsSats = 0.25;
+    private final String currency = "DKK";
+    private final String greetings = "Tak fordi du besøgte"; //Could be local. I find it easier to locate and change here.
 
     public Receipt(double subtotal){
-        this.subtotal = subtotal;
         printReceipt(subtotal, 0);
     }
 
     public Receipt(double subtotal, double tip){
-        this.total = subtotal;
-        this.tip = tip;
         printReceipt(subtotal, tip);
     }
 
 
     private void printReceipt(double subtotal, double tip){
-        this.subtotal = subtotal;
-        subtotalWOTax = subtotal * (1-momsSats);
-        tax = subtotal * momsSats;
-        total = subtotal + tip;
+        /* local variables - only needed in this scope. */
+        double subtotalWOTax = subtotal * (1 - momsSats);
+        double tax = subtotal * momsSats;
+        double total = subtotal + tip;
 
-
-
-        printlogo(); //logo
-        System.out.printf("Subtotal u. moms:\t\t%58s %7.2f\n", currency, subtotalWOTax); //total
-        System.out.printf("Moms:\t\t%70s %7.2f\n", currency, tax); //tax
+        printLogo(greetings);                                                                     //logo
+        System.out.printf("Subtotal u. moms:\t\t%58s %7.2f\n", currency, subtotalWOTax); //subtotal (no tax)
+        System.out.printf("Moms:\t\t%70s %7.2f\n", currency, tax);                       //tax
         if(tip>0)
-            System.out.printf("Drikkepenge:\t\t%62s %7.2f\n", currency, tip); //tip
+            System.out.printf("Drikkepenge:\t\t%62s %7.2f\n", currency, tip);            //tip (if applicable)
 
         for(int i = 0; i<90;i++){
-            System.out.print("="); // breakline
+            System.out.print("=");                                                       //break line
         }
-        System.out.println(); //newline
+        System.out.println();                                                            //new line
 
-        System.out.printf("Total:\t\t%70s %7.2f\n", currency,total); //total
+        System.out.printf("Total:\t\t%70s %7.2f\n", currency, total);                     //total
     }
 
-    public static void printlogo(){
-        String greetings = "Tak fordi du besøgte";
-
+    private static void printLogo(String greetings){
         System.out.printf("%55s\n", greetings);
         System.out.println(
                 "    _______      ____     ________     .-''-.          .--.   .--.      .-''-.     ____     \n" +
@@ -59,5 +48,4 @@ public class Receipt {
                         "                                                                                            "
         );
     }
-
 }
