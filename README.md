@@ -10,4 +10,6 @@ Assignment about `printf` in java
 
 ![cafekea](https://user-images.githubusercontent.com/22276218/93868739-31114f00-fccb-11ea-95b9-00475256274b.png)
 
-The only localization is in danish.
+_Notes:_
+* The only localization is in danish.
+* Current indentation of printstatement are aligned with Intellij's standard font: `JetBrain's Mono`
