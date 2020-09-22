@@ -11,5 +11,5 @@ Assignment about `printf` in java
 ![cafekea](https://user-images.githubusercontent.com/22276218/93868739-31114f00-fccb-11ea-95b9-00475256274b.png)
 
 _Notes:_
-* The only localization is in danish.
+* The only localization currently available is in danish.
 * Current indentations of print statements are aligned with IntelliJ's standard font: `JetBrain's Mono`
