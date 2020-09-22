@@ -8,15 +8,15 @@ public class Main {
 
         Pattern pattern = Pattern.compile("(?:Yes\\b|Ja\\b|[yj1]|[yj1].+)", Pattern.CASE_INSENSITIVE);
 
-            Scanner in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
 
-            System.out.println("Indtast beløb:");
-            double inputTotal = in.nextDouble();
+        System.out.println("Indtast beløb:");
+        double inputTotal = in.nextDouble();
 
-            System.out.println("Tilføj drikkepenge?");
-            String tipAnswer = in.next();
+        System.out.println("Tilføj drikkepenge?");
+        String tipAnswer = in.next();
 
-            final Matcher matcher = pattern.matcher(tipAnswer);
+        final Matcher matcher = pattern.matcher(tipAnswer);
 
         if (matcher.matches()){
             System.out.println("Drikkepenge:");
