@@ -19,7 +19,7 @@ public class Receipt {
         double tax = subtotal * momsSats;
         double total = subtotal + tip;
 
-        printLogo(greetings);                                                                     //logo
+        printLogo(greetings);                                                            //logo
         System.out.printf("Subtotal u. moms:\t\t%58s %7.2f\n", currency, subtotalWOTax); //subtotal (no tax)
         System.out.printf("Moms:\t\t%70s %7.2f\n", currency, tax);                       //tax
         if(tip>0)
@@ -30,7 +30,7 @@ public class Receipt {
         }
         System.out.println();                                                            //new line
 
-        System.out.printf("Total:\t\t%70s %7.2f\n", currency, total);                     //total
+        System.out.printf("Total:\t\t%70s %7.2f\n", currency, total);                    //total
     }
 
     private static void printLogo(String greetings){
