@@ -1,5 +1,5 @@
 # Receipt
-Assignment about printf in java
+Assignment about `printf` in java
 
 The only localization is in danish.
 
