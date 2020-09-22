@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Pattern pattern = Pattern.compile("^(?:Yes\\b|Ja\\b|[yj1]|[yj1].+)$", Pattern.CASE_INSENSITIVE);
+        Pattern pattern = Pattern.compile("(?:Yes\\b|Ja\\b|[yj1]|[yj1].+)", Pattern.CASE_INSENSITIVE);
 
             Scanner in = new Scanner(System.in);
 
