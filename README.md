@@ -12,4 +12,4 @@ Assignment about `printf` in java
 
 _Notes:_
 * The only localization is in danish.
-* Current indentation of printstatement are aligned with Intellij's standard font: `JetBrain's Mono`
+* Current indentations of print statements are aligned with IntelliJ's standard font: `JetBrain's Mono`
